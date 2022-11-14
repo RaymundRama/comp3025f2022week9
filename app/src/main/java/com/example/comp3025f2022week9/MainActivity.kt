@@ -52,17 +52,17 @@ class MainActivity : AppCompatActivity() {
         builder.setTitle(dialogTitle)
         builder.setView(view)
 
-        builder.setPositiveButton(positiveButtonTitle) { dialog, _ -> dialog.dismiss()
+        builder.setPositiveButton(positiveButtonTitle) { dialog, _ ->
+            dialog.dismiss()
 
             val tvShowTitleEditText = findViewById<EditText>(R.id.tv_show_title_editText)
             val studioNameEditText = findViewById<EditText>(R.id.Studio_Name_EditText)
             val newTVShow = TvShow(tvShowTitleEditText.text.toString(), studioNameEditText.text.toString())
 
+            //FavouriteTVShows.add(TvShow(tvShowTitleEditText.text.toString(), studioNameEditText.text.toString()))
             FavouriteTVShows.add(newTVShow)
             firstAdapter.notifyItemInserted(FavouriteTVShows.size)
         }
-
-
         builder.create().show()
     }
 }
