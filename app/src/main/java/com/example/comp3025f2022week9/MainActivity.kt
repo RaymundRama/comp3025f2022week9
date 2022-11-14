@@ -1,12 +1,8 @@
 package com.example.comp3025f2022week9
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputType
-import android.util.Log
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         TvShow("Lord of the Rings", "Prime Video"),
         TvShow("Andor", "Disney"),
         TvShow("Severance", "AppleTV"),
-        TvShow("Star Trek: Strange New Worlds", "Paramount"))
+        TvShow("Star Trek: Strange New Worlds", "Paramount+"))
 
     lateinit var addTVShowFAB: FloatingActionButton
     lateinit var firstAdapter: FirstAdapter
@@ -56,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             dialog.dismiss()
 
             val tvShowTitleEditText = findViewById<EditText>(R.id.tv_show_title_editText)
-            val studioNameEditText = findViewById<EditText>(R.id.Studio_Name_EditText)
+            val studioNameEditText = findViewById<EditText>(R.id.studio_name_editText)
             val newTVShow = TvShow(tvShowTitleEditText.text.toString(), studioNameEditText.text.toString())
 
             //FavouriteTVShows.add(TvShow(tvShowTitleEditText.text.toString(), studioNameEditText.text.toString()))
