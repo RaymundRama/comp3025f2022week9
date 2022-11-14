@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         firstAdapter = FirstAdapter(FavouriteTVShows)
-        val recyclerView: RecyclerView = findViewById(R.id.FirstRecyclerView)
+        val recyclerView: RecyclerView = findViewById(R.id.First_Recycler_View)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = firstAdapter
@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
         builder.setPositiveButton(positiveButtonTitle) { dialog, _ ->
             dialog.dismiss()
 
-            val tvShowTitleEditText = findViewById<EditText>(R.id.tv_show_title_editText)
-            val studioNameEditText = findViewById<EditText>(R.id.studio_name_editText)
+            val tvShowTitleEditText = findViewById<EditText>(R.id.TV_Show_Title_EditText)
+            val studioNameEditText = findViewById<EditText>(R.id.Studio_Name_EditText)
             val newTVShow = TvShow(tvShowTitleEditText.text.toString(), studioNameEditText.text.toString())
 
             //FavouriteTVShows.add(TvShow(tvShowTitleEditText.text.toString(), studioNameEditText.text.toString()))

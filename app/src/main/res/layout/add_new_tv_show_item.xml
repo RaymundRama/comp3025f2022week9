@@ -14,27 +14,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/tv_show_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="5dp"
             android:text="@string/title_prompt"
-            android:textSize="24sp"
+            android:textSize="@dimen/CellTextSize"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/tv_show_title_editText"
-            app:layout_constraintHorizontal_bias="0.433"
+            app:layout_constraintBottom_toTopOf="@+id/Studio_Title"
+            app:layout_constraintEnd_toStartOf="@+id/TV_Show_Title_EditText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_conversion_absoluteHeight="32dp"
             tools:layout_conversion_absoluteWidth="151dp" />
 
-
         <EditText
-            android:id="@+id/tv_show_title_editText"
+            android:id="@+id/TV_Show_Title_EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -43,8 +40,8 @@
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:nextFocusDown="@id/studio_name_editText"
-            app:layout_constraintBottom_toTopOf="@+id/studio_name_editText"
+            android:nextFocusDown="@id/Studio_Name_EditText"
+            app:layout_constraintBottom_toTopOf="@+id/Studio_Name_EditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_show_title"
             app:layout_constraintTop_toTopOf="parent"
@@ -53,25 +50,20 @@
             tools:layout_conversion_absoluteWidth="230dp" />
 
         <TextView
-            android:id="@+id/studio_title"
+            android:id="@+id/Studio_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="5dp"
             android:text="@string/subtitle_prompt"
             android:textSize="@dimen/CellTextSize"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/studio_name_editText"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_show_title"
             tools:layout_conversion_absoluteHeight="0dp"
             tools:layout_conversion_absoluteWidth="151dp" />
 
         <EditText
-            android:id="@+id/studio_name_editText"
+            android:id="@+id/Studio_Name_EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
@@ -82,10 +74,11 @@
             android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/studio_title"
+            app:layout_constraintStart_toEndOf="@+id/Studio_Title"
             tools:ignore="SpeakableTextPresentCheck"
             tools:layout_conversion_absoluteHeight="0dp"
             tools:layout_conversion_absoluteWidth="230dp" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

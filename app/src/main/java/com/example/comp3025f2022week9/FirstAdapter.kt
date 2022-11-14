@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FirstAdapter(private val dataSet: MutableList<TvShow>) :
+class FirstAdapter(private val dataSet: MutableList<TvShow>):
     RecyclerView.Adapter<FirstAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
+    {
         val title: TextView
         val subTitle: TextView
 
@@ -28,13 +29,11 @@ class FirstAdapter(private val dataSet: MutableList<TvShow>) :
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.title.text = dataSet[position].title //index of the array
+        viewHolder.title.text = dataSet[position].title // index of the array
         viewHolder.subTitle.text = dataSet[position].subTitle
     }
 
     override fun getItemCount(): Int {
         return dataSet.size
-        //was wondering why the app wasn't running after I finished adding recyclerview.layoutmanager.
-        //Turns out I hadn't added this return
     }
 }
