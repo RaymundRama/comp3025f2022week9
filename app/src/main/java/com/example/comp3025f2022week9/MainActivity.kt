@@ -47,15 +47,12 @@ class MainActivity : AppCompatActivity() {
 
         val builder = AlertDialog.Builder(this)
 
-        val tvShowTitle = EditText(this)
-        tvShowTitle.inputType = InputType.TYPE_CLASS_TEXT
+        val tvShowTitleEditText = findViewById<EditText>(R.id.tv_show_title_editText)
 
-        val studioName = EditText(this)
-        studioName.inputType = InputType.TYPE_CLASS_TEXT
+        val studioNameEditText = findViewById<EditText>(R.id.Studio_Name_EditText)
 
         builder.setTitle(dialogTitle)
-        builder.setView(tvShowTitle)
-        builder.setView(studioName)
+        builder.setView(R.layout.add_new_tv_show_item)
 
         builder.setPositiveButton(positiveButtonTitle) { dialog, _ ->
             dialog.dismiss()
